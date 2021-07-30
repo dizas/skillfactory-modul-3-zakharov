@@ -1,104 +1,151 @@
-/* Подключаемый шрифт */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap");
+/* Fonts */
+
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans-Regular.ttf');
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans-Italic.ttf');
+	font-style: italic;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans-SemiBold.ttf');
+	font-style: normal;
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans-Bold.ttf');
+	font-style: normal;
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans-ExtraBold.ttf');
+	font-style: normal;
+	font-weight: 800;
+}
 
 body {
 	margin: 0;
-	background-color: #f6f2f2;
+	background-color: #F6F2F2;
 }
 
-header {
-	background-color: #000000;
-	max-width: 1249px;
-	margin: 29px auto 0;
-}
+/* Header */
 
-/* Главное меню*/
 .main-menu-wrapper {
-	margin: 0 auto;
-	max-width: 474px;
+	margin-top: 29px;
+	display: flex;
+	justify-content: center;
 }
 
-.main-menu {
+.main-menu-wrapper .main-menu{	
+	width: 1249px;
+	background-color: #000;
+	opacity: 0.8;
+}
+
+.main-menu-wrapper .main-menu ul{
+	display: flex;
+	justify-content: center;
 	margin: 0;
-	padding-inline-start: 0;
-	list-style-type: none;
+	padding: 0;
+	list-style: none;
 }
 
-.main-menu li {
-	display: inline-block;
-}
-
-.main-menu li a {
+.main-menu-wrapper .main-menu li a {
 	display: block;
-	padding: 32px 23px;
-	color: #e0e0e0;
-	font-family: Open Sans;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 14px;
-	line-height: 24px;
+	padding: 39px 23px 26px 23px;
+	color: #E0E0E0;
 	text-decoration: none;
 	text-transform: uppercase;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 14px;
+	line-height: 24px;
 	letter-spacing: 0.49px;
 }
 
-.main-menu li a:hover {
-	background-color: #ff3f40;
+.main-menu-wrapper .main-menu li a:hover {
+	background-color: #FF3F40;
 }
 
-/* Первая секция*/
-.first-section-wrapper {
-	max-width: 1249px;
-	margin: 102px auto 0;
-	position: relative;
+/* Section Wrappers */
+
+.section-wrapper {
+	display: flex;
+	justify-content: center;
 }
 
-.first-section-wrapper > div {
-	max-width: 618px;
-	display: inline-block;
+.section-wrapper:nth-of-type(n+2) {
+	background-color: #fff;
 }
 
-.first-section-wrapper h1 {
-	position: relative;
-	top: -14px;
-	margin: 0;
-	font-family: Open Sans;
-	font-style: normal;
+.section-wrapper > section {
+	width: 1249px;
+}
+
+/* First Section (Our strong organisation) */
+
+.first-section {
+	display: flex;
+	flex-direction: row;
+	margin-top: 91px;
+	margin-bottom: 111px;
+}
+
+.first-section .left-item h1 {
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
 	font-weight: 800;
+	font-style: normal;
 	font-size: 60px;
 	line-height: 72px;
 	letter-spacing: 1.5px;
-	text-transform: uppercase;
+	margin: 0;
 }
 
-.first-section-wrapper p {
-	margin-bottom: 63px;
-	font-family: Open Sans;
+.first-section .left-item p {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
 	font-style: normal;
-	font-weight: normal;
 	font-size: 15.9953px;
 	line-height: 28px;
+	margin: 17px 154px 58px 0;
 }
-.first-section-wrapper > div a {
+
+.first-section .left-item a {
 	display: inline-block;
-	padding: 11px 63px;
-	background-color: #ff2d2d;
-	font-family: Open Sans;
+	padding: 14px 63px 17px 63px;
+	background-color: #FF2D2D;
+	border-radius: 5px;
+	text-decoration: none;
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
 	font-style: normal;
-	font-weight: bold;
 	font-size: 18.0412px;
 	line-height: 34px;
 	letter-spacing: 0.3195px;
-	text-decoration: none;
-	color: white;
 }
 
-.first-section-wrapper > a {
-	top: 0;
-	right: 0;
-	position: absolute;
+.first-section > a {
+	margin-top: 12px;
+	box-shadow: 0px -20px 60px #cacaca;
 }
-.first-section-wrapper > a > img{
-	width: 551px;
-	height: 356px;
+
+/* Second Section (Do you know) */
+
+.second-section {
+	border-bottom: 5px solid #ECECEC;
 }
