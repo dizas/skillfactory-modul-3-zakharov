@@ -1,4 +1,8 @@
-/* Fonts */
+/**
+* Connecting local fonts
+* Only one family of fonts will be used on the site - Open Sans
+* Format fonts - only TTF
+*/
 
 @font-face {
 	font-family: 'Open Sans';
@@ -35,7 +39,10 @@
 	font-weight: 800;
 }
 
-/* MAIN Sections */
+/**
+* Styles for the main elements: 
+* body, header, main, footer
+*/
 
 body {
 	margin: 0;
@@ -52,10 +59,13 @@ footer {
 	background-color: #313030;
 }
 
-/* MAIN tags */
+/**
+* Basic styles for HTML tags
+* These styles will specify the display of the default tag
+*/
 
-ul {
-	margin: 0;
+ul { 
+	margin: 0; /* Delete the default styles for UL */
 	padding: 0;
 	list-style: none;
 }
@@ -124,7 +134,12 @@ button {
 	text-transform: uppercase;
 	color: #fff;
 }
-/* Section wrappers */
+
+/**
+* Wrappers for sections, including Footer
+* Wrappers set the main width, display, background-color, margin 
+* and position of each section
+*/
 
 .section-wrapper {
 	display: flex;
@@ -143,7 +158,7 @@ button {
 	margin-right: 20px;
 }
 
-.section-wrapper:nth-of-type(5), .section-wrapper:nth-of-type(8){
+.section-wrapper:nth-of-type(5), .section-wrapper:nth-of-type(8) {
 	background-color: #313030;
 }
 
@@ -156,7 +171,13 @@ button {
 	margin-right: 20px;
 }
 
-/* Header */
+/**
+* HEADER SECTION
+*
+* This section includes:
+* 1) The main top menu
+* 2) Menu button for small screens (default is hidden)
+*/
 
 .main-menu-wrapper {
 	padding-top: 29px;
@@ -164,14 +185,14 @@ button {
 	justify-content: center;
 }
 
-.main-menu-wrapper .main-menu {
+.main-menu-wrapper .main-menu { /* [1] */
 	width: 1249px;
 	margin-left: 20px;
 	margin-right: 20px;
 	background-color: #313030;
 }
 
-.main-menu-wrapper .main-menu ul{
+.main-menu-wrapper .main-menu ul {
 	display: flex;
 	justify-content: center;
 }
@@ -190,14 +211,26 @@ button {
 	background-color: #FF3F40;
 }
 
-.main-menu-wrapper .main-menu-small {
+.main-menu-wrapper .main-menu-small { /* [2] */
 	display: none;
 	flex-direction: row;
 	justify-content: flex-end;
 }
 
-
-/* First Section (Our strong organisation) */
+/** 
+* FIRST SECTION
+* Title - "Our strong organisation"
+* 
+* This section includes left part (.left-item) and right part (.right-item)
+*
+* left part:
+* 1) Title (Styles are defined by default in the block "Basic styles")
+* 2) Paragraph
+* 3) Button "Contact us"
+* 
+* Right part:
+* 4) Link, image inside
+*/
 
 .first-section {
 	display: flex;
@@ -210,11 +243,11 @@ button {
 	width: 55%;
 }
 
-.first-section .left-item p {
+.first-section .left-item p { /* [2] */
 	margin: 17px 154px 58px 0;
 }
 
-.first-section .left-item a {
+.first-section .left-item a { /* [3] */
 	display: inline-block;
 	padding: 14px 63px 17px 63px;
 	background-color: #FF2D2D;
@@ -231,12 +264,28 @@ button {
 	margin-top: 12px;
 }
 
-.first-section .right-item a img {
+.first-section .right-item a img { /* [4] */
 	max-width: 100%;
 	box-shadow: 0px -20px 60px #cacaca;
 }
 
-/* Second Section (Do you know) */
+/** 
+* SECOND SECTION
+* Title - "Do you know we can provide for you?"
+* 
+* This section includes left part (.left-item) and right part (.right-item)
+*
+* left part:
+* 1) Title
+* 2) Paragraph
+* 3) Button "Lean More"
+* 
+* Right part:
+* 4) Cards, which include:
+* 5) Picture
+* 6) Title
+* 7) Paragraph
+*/
 
 .second-section {
 	display: flex;
@@ -251,19 +300,19 @@ button {
 	width: 50%;
 }
 
-.second-section .left-item h2 {
+.second-section .left-item h2 { /* [1] */
 	margin: 0;
 	font-size: 42.1902px;
 	line-height: 55px;
 	letter-spacing: 0.422159px;
 }
 
-.second-section .left-item p {
+.second-section .left-item p { /* [2] */
 	margin: 32px 90px 59px 0;
 	font-size: 16px;
 }
 
-.second-section .left-item a {
+.second-section .left-item a { /* [3] */
 	display: inline-block;
 	padding: 9px 58px 9px 58px;
 	background: rgba(0, 0, 0, 0.0001);
@@ -284,24 +333,24 @@ button {
 	flex-wrap: wrap;
 }
 
-.second-section .right-item .card{
+.second-section .right-item .card { /* [4] */
 	width: 48%;
 	padding: 0 1%;
 }
 
-.second-section .right-item .card img{
+.second-section .right-item .card img { /* [5] */
 	width: 37px;
 	height: 37px;
 	margin-bottom: 16px;
 }
 
-.second-section .right-item .card h3{
+.second-section .right-item .card h3 { /* [6] */
 	font-size: 24.0692px;
 	line-height: 0px;
 	letter-spacing: 0.271838px;
 }
 
-.second-section .right-item .card p{
+.second-section .right-item .card p { /* [7] */
 	margin: 8px 0 46px 0;
 	font-style: normal;
 	font-weight: 400;
@@ -309,7 +358,17 @@ button {
 	line-height: 28px;
 }
 
-/* Third section (Feature products) */
+/**
+* THIRD SECTION
+* Title - "Feature products"
+*
+* This section includes:
+* 1) Title (Styles are defined by default in the block "Basic styles")
+* 2) Paragraph
+* 3) Lower Line
+* 4) Local menu
+* 5) Cards block
+*/
 
 .third-section {
 	margin: 90px 0 90px 0;
@@ -319,19 +378,19 @@ button {
 	text-align: center;
 }
 
-.third-section .feature-products p {
+.third-section .feature-products p { /* [2] */
 	max-width: 536px;
 	margin: 11px auto 28px auto;
 }
 
-.third-section .feature-products .line {
+.third-section .feature-products .line { /* [3] */
 	width: 134px;
 	height: 5px;
 	background-color: #FF2D2D;
 	margin: 0 auto;
 }
 
-.third-section .int-menu{
+.third-section .int-menu { /* [4] */
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -357,7 +416,7 @@ button {
 	color: #FF2D2D;
 }
 
-.third-section .cards {
+.third-section .cards { /* [5] */
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -373,22 +432,44 @@ button {
 	background-color: blue;
 }
 
-/* Fourth section (Our team)*/
+/**
+* FOURTH SECTION
+* Title - "Meet our team"
+* 
+* This section includes top part (.our-team) and bottom part (.person)
+* Bottom part includes left part (.photo) and right part (.description)
+*
+* Top part:
+* 1) Title
+* 2) Paragraph
+* 3) Lower Line
+*
+* Left bottom part
+* 4) Photo
+* 
+* Right bottom part
+* 5) Title
+* 6) Paragraph
+* 7) Social Links
+* 8) Social Links for small screens (default is hidden)
+* 9) Cards
+* 10) Cards Links for small screens (default is hidden)
+*/
 
 .fourth-section {
 	margin: 80px 0 100px 0;
 }
 
-.fourth-section .our-team h2 {
+.fourth-section .our-team h2 { /* [1] */
 	margin: 0;
 }
 
-.fourth-section .our-team p {
+.fourth-section .our-team p { /* [2] */
 	max-width: 478px;
 	margin: 39px 0 32px 0;
 }
 
-.fourth-section .our-team .line {
+.fourth-section .our-team .line { /* [3] */
 	width: 134px;
 	height: 5px;
 	background-color: #FF2D2D;
@@ -400,7 +481,7 @@ button {
 	margin-top: 64px;
 }
 
-.fourth-section .person .photo{
+.fourth-section .person .photo { /* [4] */
 	width: 26.2%;
 	padding-bottom: 34.3%;
 	background-color: #FF2D2D;
@@ -411,23 +492,23 @@ button {
 	width: 73.8%;
 	padding-left: 72px;
 }
-.fourth-section .person .description h3 {
+.fourth-section .person .description h3 { /* [5] */
 	font-size: 30.127px;
 	line-height: 0px;
 	letter-spacing: 0.275265px;
 	text-transform: uppercase;
 }
 
-.fourth-section .person .description p {
+.fourth-section .person .description p { /* [6] */
 	max-width: 662px;
 	margin: 24px 0 42px 0;
 }
 
-ul.social {
+ul.social { /* [7] */
 	display: flex;
 }
 
-ul.social-small {
+ul.social-small { /* [8] */
 	display: none;
 	margin-top: 40px;
 }
@@ -440,17 +521,18 @@ ul.social a, ul.social-small a {
 	line-height: 24px;
 	letter-spacing: 0.9px;
 }
-.other-person-small {
+
+.other-person { /* [9] */
+	display: flex;
+	margin-top: 46px;
+	justify-content: space-between;
+}
+
+.other-person-small { /* [10] */
 	display: none;
 	justify-content: space-between;
 	flex-wrap: wrap;
 	margin-top: 46px;	
-}
-
-.other-person {
-	display: flex;
-	margin-top: 46px;
-	justify-content: space-between;
 }
 
 .other-person .item, .other-person-small .item {
@@ -459,19 +541,22 @@ ul.social a, ul.social-small a {
 	background-color: #FF2D2D;
 }
 
-/* Fifth section (Email Address)*/
+/**
+* FIFTH SECTION
+* Title - "Subscribe"
+*
+* This section includes:
+* 1) Basic inscription
+* 2) Additional inscription
+* 3) Form to add an e-mail to subscription
+*/
 
 .fifth-section {
 	text-align: center;
 	margin: 140px 0 140px 0;
 }
 
-.fifth-section form{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-}
-.fifth-section p:first-of-type {
+.fifth-section p:first-of-type { /* [1] */
 	margin: 16px 0 16px 0;
 	font-style: normal;
 	font-weight: 700;
@@ -481,13 +566,19 @@ ul.social a, ul.social-small a {
 	color: #FFFFFF;
 }
 
-.fifth-section p:nth-of-type(2) {
+.fifth-section p:nth-of-type(2) { /* [2] */
 	margin-bottom: 57px;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 15.9953px;
 	line-height: 28px;
 	color: #FFFFFF;
+}
+
+.fifth-section form { /* [3] */
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 .fifth-section input {
@@ -506,23 +597,51 @@ ul.social a, ul.social-small a {
 	font-size: 17.9026px;
 }
 
-/* Sixth section (Get in touch)*/
+/**
+* SIXTH SECTION
+* Title - "Get in touch"
+*
+* This section includs:
+* 1) Title (Styles are defined by default in the block "Basic styles")
+* 2) Paragraph
+* 3) Lower Line
+*/
 .sixth-section {
 	margin: 100px 0 72px 0;
 }
 
-.sixth-section .get-in-touch p {
+.sixth-section .get-in-touch p { /* [2] */
 	margin: 40px 0 53px 0;
 	max-width: 752px;
 }
 
-.sixth-section .get-in-touch .line {
+.sixth-section .get-in-touch .line { /* [3] */
 	width: 134px;
 	height: 5px;
 	background-color: #FF2D2D;
 }
 
-/* Seventh section (Contacts)*/
+/**
+* SEVENTH SECTION
+* Title - "Contact"
+*
+* This section is separated from the sixth to correctly set the beckgrunds 
+* for the "Contact Info" block, which is stretched to the right border 
+* of the screen
+*
+* This section includes left part(.send-massage) and right part(.contact-info)
+*
+* Left part:
+* 1) Form to send a message includs:
+* 2) Fields for entering the name and e-mail
+* 3) Fields for text
+* 4) Button for sending massage
+*
+* Right part:
+* 5) Title
+* 6) 3 paragraphs
+* 7) Beckgrund setting field, which is stretched to the end of the screen
+*/
 
 .seventh-section {
 	display: flex;
@@ -534,20 +653,20 @@ ul.social a, ul.social-small a {
 	width: 67.1%;
 }
 
-.seventh-section .send-massage form{
+.seventh-section .send-massage form { /* [1] */
 	display: flex;
 	flex-direction: column;
 	width: 87.6%;
 }
 
-.seventh-section .send-massage .input-wrapper{
+.seventh-section .send-massage .input-wrapper {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	margin-bottom: 43px;
 }
 
-.seventh-section .send-massage input{
+.seventh-section .send-massage input { /* [2] */
 	width: 39.244%;
 	padding: 19px 0 20px 50px;
 	background-color: #e5e5e5;
@@ -556,7 +675,7 @@ ul.social a, ul.social-small a {
 	color: #000000;
 }
 
-.seventh-section .send-massage textarea{
+.seventh-section .send-massage textarea { /* [3] */
 	margin-bottom: 43px;
 	padding: 32px 53px;
 	border: none;
@@ -570,7 +689,7 @@ ul.social a, ul.social-small a {
 	color: #000000;
 }
 
-.seventh-section .send-massage button{
+.seventh-section .send-massage button { /* [4] */
 	padding: 21px 0;
 	background-color: #FF3B3B;
 	font-size: 17.9026px;
@@ -581,7 +700,7 @@ ul.social a, ul.social-small a {
 	padding: 141px 0 0 81px;
 }
 
-.seventh-section .contact-info h3 {
+.seventh-section .contact-info h3 { /* [5] */
 	font-weight: 700;
 	font-size: 17.9026px;
 	line-height: 34px;
@@ -590,7 +709,7 @@ ul.social a, ul.social-small a {
 	color: #FFFFFF;
 }
 
-.seventh-section .contact-info p {
+.seventh-section .contact-info p { /* [6] */
 	margin-right: 20px;
 	font-size: 16px;
 	color: #FFFFFF;
@@ -605,26 +724,34 @@ ul.social a, ul.social-small a {
 	margin-bottom: 20px;
 }
 
-.bg-contact-info {
+.bg-contact-info { /* [7] */
 	position: absolute;
 	right:0;
 	z-index: -1;
-	width: 50%;
+	width: 60%;
 	height: 100%;
 	background-color: #2D2D2D;
 	bottom:0;
 }
 
-/* Footer */
+/** 
+* FOOTER
+* 
+* Display Flex is set for all the footer
+* 
+* This section includes:
+* 1) Copyright
+* 2) Social icons
+*/
 
-.footer-wrapper p {
+.footer-wrapper p { /* [1] */
 	padding: 37px 0 19px 0;
 	font-size: 16px;
 	line-height: 26px;
 	color: #B8B8B8;
 }
 
-.footer-wrapper .social {
+.footer-wrapper .social { /* [1] */
 	width: 186px;
 	display: flex;
 	flex-direction: row;
@@ -637,245 +764,438 @@ ul.social a, ul.social-small a {
 	height: 33px;
 }
 
-@media (max-width: 1249px) {
-	.section-wrapper > section, .footer-wrapper, .main-menu-wrapper .main-menu {
+/** 
+* MEDIA RULES
+*/
+
+/**
+* Screen max-width 1289 px
+*
+* 1) Remove the fixed width 1249px for all sections, only indents left and 
+* right of the screen, specified for sections initially
+* 
+* Fifth section
+* 2) Reduce font size in paragraph
+*
+* Seventh section
+* 3) Remove beckgrund field, which is stretched to the end of the screen
+* 4) Set Beckgrund for block "Contact info"
+*/
+
+@media (max-width: 1289px) {
+
+	.section-wrapper > section, .footer-wrapper, .main-menu-wrapper .main-menu { /* [1] */
 		width: 100%;
 	}
-	.bg-contact-info {
-		display: none;
-	}
-	.seventh-section .contact-info {
-		background-color: #2D2D2D;
-	}
-	.fifth-section p:first-of-type {
+
+	.fifth-section p:first-of-type { /* [2] */
 		font-size: 34px;
 	}
+
+	.bg-contact-info { /* [3] */
+		display: none;
+	}
+
+	.seventh-section .contact-info { /* [4] */
+		background-color: #2D2D2D;
+	}
+
 }
+
+/**
+* Screen max-width 1140 px
+*
+* 1) Reduce font size of all titles
+* 2) Reduce margin-top and margin-bottom for sections
+*
+* First section
+* 3) Reduce margin-top and margin-bottom for the paragraph
+*
+* Seventh section
+* 4) Reduce the length of the input fields in the form to send message
+*/
 
 @media (max-width: 1140px) {
 
-	h1 {
+	h1 { /* [1] */
 		font-size: 42px;
 		line-height: 56px;
 	}
+
 	h2, .second-section .left-item h2 {
 		font-size: 34px;
 	}
+
 	h3, .fourth-section .person .description h3 {
 		font-size: 26px;
 	}
-	.first-section .left-item p {
-		margin-right: 30px;
-		margin-bottom: 38px;
-	}
-	.first-section, .third-section, .fourth-section, .sixth-section {
+
+	.first-section, .third-section, .fourth-section, .sixth-section { /* [2] */
 		margin-top: 50px;
 		margin-bottom: 50px;
 	}
+
 	.second-section {
 		margin-top: 50px;
 		padding-bottom: 50px;
 	}
+
 	.fifth-section {
 		margin-top: 50px;
 		margin-bottom: 80px;
 	}
-	.seventh-section .send-massage input {
+
+	.first-section .left-item p { /* [3] */
+		margin-right: 30px;
+		margin-bottom: 38px;
+	}
+
+	.seventh-section .send-massage input { /* [4] */
 		width: 36%;
 	}
 }
 
+/**
+* Screen max-width 1020 px
+*
+* Second section
+* 1) Reduce font size of title, change the width of the left and right part
+*
+* Third section
+* 2) Reduce paddings and font-size in the local menu
+*
+* Fourth section
+* 3) Reduce margin-top for section
+* 4) Reduce the distance between the photo and the right part with description
+*
+* Fifth-section
+* 5) Reduce font-Size for inscriptions and margin-bottom
+* 6) Reduce pandings for Input forms and send button
+*
+* Seventh section
+* 7) Reduce pandings for block "Contact info"
+*/
+
 @media (max-width: 1020px) {
-	h2, .second-section .left-item h2 {
+
+	h2, .second-section .left-item h2 { /* [1] */
 		font-size: 26px;
 	}
+
 	.second-section .left-item {
 		width: 40%;
 	}
+
 	.second-section .right-item {
 		width: 60%;
 	}
-	.third-section .int-menu a {
+
+	.third-section .int-menu a { /* [2] */
 		padding: 0 20px 0 20px;
 		font-size: 18px;
 	}
-	.fifth-section p:first-of-type {
+
+	.fourth-section { /* [3] */
+		margin-top: 10px;
+	}
+
+	.fourth-section .person .description { /* [4] */
+		padding-left: 36px;
+	}
+
+	.fifth-section p:first-of-type { /* [5] */
 		font-size: 28px;
 	}
+
 	.fifth-section p:nth-of-type(2) {
 		font-size: 13.5px;
 		margin-bottom: 27px;
 	}
-	.fifth-section input {
+
+	.fifth-section input { /* [6] */
 		padding: 20px 0 18px 28px;
 	}
+
 	.fifth-section button {
 		padding: 16px 60px 12.4px 60px;
 	}
-	.fourth-section {
-		margin-top: 10px;
-	}
-	.fourth-section .person .description {
-		padding-left: 36px;
-	}
-	.seventh-section .contact-info {
+
+	.seventh-section .contact-info { /* [7] */
 		padding: 100px 0 0 56px;
 	}
 }
 
+/**
+* Screen max-width 900 px
+*
+* 1) Reduce font size of H2 titles
+*
+* Second section
+* 2) Reduce font size of card titles
+* 3) Hold the right block under the left block
+* 4) Set the width 100% and margins for these blocks
+*/
+
 @media (max-width: 900px) {
-	h2, .second-section .left-item h2 {
+
+	h2, .second-section .left-item h2 { /* [1] */
 		font-size: 22px;
 	}
-	.second-section .right-item .card h3 {
+
+	.second-section .right-item .card h3 { /* [2] */
 		font-size: 20px;
 	}
-	.second-section {
+
+	.second-section { /* [3] */
 		flex-direction: column;
 	}
-	.second-section .left-item {
+
+	.second-section .left-item {/* [4] */
 		width: 100%;
 	}
+
 	.second-section .right-item {
 		width: 100%;
 		margin-top: 40px;
 	}
-	.second-section .left-item p{
+
+	.second-section .left-item p {
 		margin: 32px 0;
 	}
 }
 
+/**
+* Screen max-width 820 px
+*
+* 1) Reduce font size of H1 titles
+*
+* Third section
+* 2) Reduce paddings and font-size in the local menu
+*
+* Fourth section
+* 3) Place the "Other Person" block at the bottom, 
+*    removing it from the usual location
+*
+* Fifth section
+* 4) Reduce font-size and paddings for inscriptions, input form and send button
+*
+* Seventh section
+* 5) Change the width of the form and paddings within the input fields
+* 6) Reduce paddings and font-size for the block "Contact Info"
+*/
+
 @media (max-width: 820px) {
-	h1 {
+
+	h1 { /* [1] */
 		font-size: 26px;
 		line-height: 32px;
 	}
-	.third-section .int-menu a {
+
+	.third-section .int-menu a { /* [2] */
 		font-size: 14px;
 		letter-spacing: 0;
 		padding: 0 10px 0 10px;
 	}
-	.other-person{
+
+	.fourth-section .other-person { /* [3] */
 		display: none;
 	}
-	.other-person-small {
+
+	.fourth-section .other-person-small {
 		display: flex;
 	}
-	.fifth-section p:first-of-type {
+
+	.fifth-section p:first-of-type { /* [4] */
 		font-size: 18px;
 	}
+
 	.fifth-section p:nth-of-type(2) {
 		font-size: 12px;
 	}
+
 	.fifth-section button {
 		font-size: 14px;
 		padding: 12px 50px 10.4px 50px
 	}
+
 	.fifth-section input {
 		padding: 12px 0 10px 28px;
 	}
-	.seventh-section .send-massage form {
+
+	.seventh-section .send-massage form { /* [5] */
 		width: 94%;
 	}
+
 	.seventh-section .send-massage input {
 		padding: 10px 0 10px 20px;
 		width: 38%;
 	}
-	.seventh-section .contact-info {
+
+	.seventh-section .contact-info { /* [6] */
 		padding: 80px 20px 0 20px
 	}
-	.seventh-section .contact-info p{
+
+	.seventh-section .contact-info p {
 		font-size: 12px;
 	}
 }
 
+/**
+* Screen max-width 630 px
+*
+* 1) Reduce paddings of main menu
+*
+* First section
+* 2) Put the right block under the left block, 
+*    prescribe the width of the blocks of 100%, pointing margin
+*
+* Third section
+* 3) Reduce the number of cards in the row to 2
+*
+* Fourth section
+* 4) Place the social links at the bottom, removing it from the usual location
+* 5) Specify a new width for block Photo and Description
+*
+* Seventh section
+* 6) Place the "Contact info" block under the form to send a message, 
+*    indicate the width and new paddings and margins
+*/
+
 @media (max-width: 630px) {
-	.main-menu-wrapper .main-menu a {
+
+	.main-menu-wrapper .main-menu a { /* [1] */
 		padding: 29px 12px 23px 12px;
 	}
-	.first-section {
+
+	.first-section { /* [2] */
 		flex-direction: column-reverse;
 	}
+
 	.first-section .right-item {
 		width: 100%;
     	margin: 0 0 20px 0;
 	}
+
 	.first-section .right-item a img {
 		width: 100%;
 	}
+
 	.first-section .left-item {
 		width: 100%;
 	}
-	.third-section .cards .item {
+
+	.third-section .cards .item { /* [3] */
 		width: 48%;
 		padding-bottom: 48%;
 	}
+
 	.third-section .int-menu ul {
 		flex-wrap: wrap;
 	}
+	
 	.third-section .int-menu a {
 		margin-bottom: 20px;
 	}
-	ul.social {
+
+	.fourth-section ul.social { /* [4] */
 		display: none;
 	}
-	ul.social-small {
+
+	.fourth-section ul.social-small {
 		display: flex;
 	}
-	.fourth-section .person .photo {
+
+	.fourth-section .person .photo { /* [5] */
 		width: 40%;
 	}
+
 	.fourth-section .person .description {
 		width: 60%;
 	}
-	.seventh-section {
+
+	.seventh-section { /* [6] */
 		flex-direction: column;
 	}
+
 	.seventh-section .send-massage {
 		width: 100%;
 	}
+
 	.seventh-section .send-massage form {
 		width: 100%;
 	}
+
 	.seventh-section .contact-info {
 		margin-top: 30px;
 		padding: 0;
 		width: 100%;
 	}
-	.contact-info h3, .contact-info p{
+
+	.seventh-section .contact-info h3, .seventh-section .contact-info p{
 		margin-left: 20px;
 		margin-right: 20px;
 	}
 }
 
+/**
+* Screen max-width 500 px
+*
+* Second section
+* 1) Put cards over each other
+*
+* Fourth section
+* 2) Reduce the number of cards in the row to 2 (block other-person)
+* 3) Reduce Social Links size
+*
+* Fifth section
+* 4) Place the send button under the entry field e-mail, 
+*    specify the width and indents
+*
+* Seventh section
+* 5) Place the entry field of the e-mail under the input field,
+*    specify the width and indents
+*
+* Footer
+* 6) Set the upper indent
+* 7) Place the Copyright under the social icons, specify indents
+*/
+
 @media (max-width: 500px) {
-	.fifth-section form {
+
+	.second-section .right-item .card { /* [1] */
+		width: 100%;
+	}
+
+	.fourth-section .other-person-small .item { /* [2] */
+		width: 48%;
+		padding-bottom: 48%;
+		margin-bottom: 20px;
+	}
+
+	.fourth-section ul.social-small a { /* [3] */
+		font-size: 16px;
+		margin-right: 11px;
+	}
+
+	.fifth-section form { /* [4] */
 		flex-direction: column;
 	}
+
 	.fifth-section input {
 		width: 86%;
 		margin: 0 auto;
 	}
+
 	.fifth-section button {
 		width: 64%;		
 		margin: 0 auto;
 		margin-top: 20px;
 	}
-	.second-section .right-item .card {
-		width: 100%;
-	}
-	.other-person .item, .other-person-small .item {
-		width: 48%;
-		padding-bottom: 48%;
-		margin-bottom: 20px;
-	}
-	ul.social a, ul.social-small a {
-		font-size: 16px;
-		margin-right: 11px;
-	}
-	.seventh-section .send-massage .input-wrapper {
+
+	.seventh-section .send-massage .input-wrapper { /* [5] */
 		flex-direction: column;
 	}
+
 	.seventh-section .send-massage input {
 		width: 70%;
 	}
@@ -883,43 +1203,67 @@ ul.social a, ul.social-small a {
 	.seventh-section .send-massage input:first-of-type {
 		margin-bottom: 20px;
 	}
-	footer {
+
+	footer { /* [6] */
 		margin-top: 20px;
 	}
-	.footer-wrapper {
+
+	.footer-wrapper { /* [7] */
 		flex-direction: column-reverse;
 	}
+
 	.footer-wrapper p {
 		padding: 0px;
 		margin: 5px auto;
 		margin-bottom: 30px;
 	}
+
 	.footer-wrapper .social {
 		padding: 0;
 		margin: 20px auto;
 	}
 	
 }
+
+/**
+* Screen max-width 460 px
+*
+* 1) Remove the main menu and add the Menu button, specify paddings
+*
+* Fourth section
+* 2) Place the Desciption under the Photo, specify width and indents
+*/
+
 @media (max-width: 460px)  {
-	.fourth-section .person {
+
+	.main-menu-wrapper .main-menu ul{ /* [1] */
+		display: none;
+	}
+
+	.main-menu-wrapper .main-menu ul.visible {
+		display: block;
+	}
+
+	.main-menu-wrapper .main-menu-small {
+		display: flex;
+	}
+
+	.main-menu-wrapper .main-menu a {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	.fourth-section .person { /* [2] */
 		flex-direction: column;
 	}
+
 	.fourth-section .person .photo {
 		width: 100%;
 		padding-bottom: 100%;
 	}
+
 	.fourth-section .person .description {
 		padding: 0;
 		width: 100%;
-	}
-	.main-menu-wrapper .main-menu ul{
-		display: none;
-	}
-	.main-menu-wrapper .main-menu-small {
-		display: flex;
-	}
-	.main-menu-wrapper .main-menu a {
-		padding-left: 30px;
-		padding-right: 30px;
 	}
 }

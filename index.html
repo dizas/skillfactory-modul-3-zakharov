@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/style.css">
+	<script async src="/js/script.js"></script>
 	<title>Skillfactory-modul-3-zakharov</title>
 </head>
 
@@ -11,13 +12,13 @@
 	<header>
 		<div class="main-menu-wrapper">
 			<div class="main-menu">
+				<div class="main-menu-small"><a href="#">Menu</a></div>
 				<ul>
 					<li><a href="">Home</a></li>
 					<li><a href="">Portfolio</a></li>
 					<li><a href="">About us</a></li>
 					<li><a href="">Contact</a></li>
 				</ul>
-				<div class="main-menu-small"><a href="">Menu</a></div>
 			</div>
 		</div>
 	</header>
@@ -146,8 +147,8 @@
 			<section class="fifth-section">
 				<p>Design tips, tricks, and freebies. Delivered weekly.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod.</p>
-				<form action="">
-					<input type="email" name="" id="" placeholder="Email Address...">
+				<form action="/" method="GET">
+					<input type="email" name="subscribe_email" id="subscribe_email" placeholder="Email Address..." required>
 					<button type="submit">subscribe</button>
 				</form>
 			</section>
@@ -166,12 +167,13 @@
 		<div class="section-wrapper">
 			<section class="seventh-section">
 				<div class="send-massage">
-					<form action="">
+					<form action="/" method="GET">
 						<div class="input-wrapper">
-							<input type="text" name="" id="" placeholder="Name">
-							<input type="email" name="" id="" placeholder="Your Mail">
+							<input type="text" name="massage_name" id="massage_name" placeholder="Name" required>
+							<input type="email" name="massage_email" id="massage_email" placeholder="Your Mail" required>
 						</div>
-						<textarea name="" id="" rows="7" placeholder="Type your message"></textarea>
+						<textarea name="massage_text" id="massage_text" rows="7" placeholder="Type your message"
+							required></textarea>
 						<button type="submit">Send message</button>
 					</form>
 				</div>
